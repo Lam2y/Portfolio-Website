@@ -1,317 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-  </head>
-  <body>
-    <div class="wrapper">
-      <div class="cover cover-left"></div>
-      <div class="cover cover-right"></div>
-
-      <div class="book">
-        <div class="book-page page-left">
-          <div class="profile-page">
-            <img src="Screenshot 2024-02-01 201703.jpg" alt="Profile Picture" />
-            <h1>Lam Yu Yan</h1>
-            <h3>Diploma Student</h3>
-            <div class="social-media">
-              <a href="https://www.facebook.com/yuyan.lam.16/"
-                ><i class="fa fa-facebook" aria-hidden="true"></i
-              ></a>
-              <a href="https://www.instagram.com/yuyan.lam/"
-                ><i class="fa fa-instagram" aria-hidden="true"></i
-              ></a>
-              <a href="https://www.linkedin.com/in/yuyan-lam-267777249/"
-                ><i class="fa fa-linkedin" aria-hidden="true"></i
-              ></a>
-              <a href="https://twitter.com/Lam2y2004"
-                ><i class="fa fa-twitter" aria-hidden="true"></i
-              ></a>
-            </div>
-            <p>
-              I am actively pursuing an internship in Data Science, leveraging a
-              robust understanding of datavisualization tools and programming
-              languages.With a proactive approach to learning and adedicated
-              work ethic, I am enthusiastic about contributing meaningfully
-              while honing my skills in a practical setting.
-            </p>
-            <div class="btn-box">
-              <a href="Resume.pdf" download="Resume (Lam Yu Yan)" class="btn">Download CV</a>
-              <a href="#" class="btn contact-me">Contact Me</a>
-            </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lam Yu Yan - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+    <header class="bg-gradient-to-r from-blue-500 to-purple-600 p-6 text-center text-2xl font-bold shadow-lg">Welcome to my Portfolio Website</header>
+    
+    <!-- Hero Section -->
+    <section class = "flex items-center justify-center text-center py-10 lg:py-20 px-6 bg-gray-900">
+      <div class = "flex flex-col lg:flex-row justify-center items-center">
+        <div class = "mx-5">
+          <div class = "flex justify-center items-center">
+            <img src="profile.jpg" alt="Profile Picture" class="w-40 h-40 rounded-full border-4 border-blue-400 shadow-lg">
           </div>
+          <h1 class="text-5xl font-extrabold mt-6">Hello, I'm</h1>
+          <span class="text-5xl font-extrabold mt-6 text-blue-400">Lam Yu Yan</span>
+          <p class="text-gray-300 mt-4 text-lg">Data Analytics Student</p>
         </div>
-
-        <div class="book-page page-right turn" id="turn-1">
-          <div class="page-front">
-            <h1 class="title">Work experience</h1>
-            <div class="workeduc-box">
-              <div class="workeduc-content">
-                <span class="year"
-                  ><i class="fa fa-calendar" aria-hidden="true"></i> 1/4/2022-
-                  28/6/2022</span
-                >
-                <h3>Teaching Assistant - VGRO EDUCATION GROUP</h3>
-                <p>
-                  Assist in preparing teaching materials, grading students
-                  assessments and providing feedback upon child's performance to
-                  parents
-                </p>
-              </div>
-              <div class="workeduc-content">
-                <span class="year"
-                  ><i class="fa fa-calendar" aria-hidden="true"></i>
-                  27/11/2023</span
-                >
-                <h3>Stage Crew - Youth Festival 2023</h3>
-                <p>Ensuring performers get in their line before performance</p>
-              </div>
-            </div>
-            <span class="number-page">1</span>
-            <span class="nextprev-btn" data-page="turn-1">
-              <i class="fa fa-chevron-right" aria-hidden="true"></i>
-            </span>
-          </div>
-
-          <div class="page-back">
-            <h1 class="title">Education</h1>
-            <div class="workeduc-box">
-              <div class="workeduc-content">
-                <span class="year"
-                  ><i class="fa fa-calendar" aria-hidden="true"></i>
-                  2017-2021</span
-                >
-                <h3>SMK Bandar Baru Sungai Long</h3>
-                <p>SPM results: 8A+ 2A</p>
-              </div>
-              <div class="workeduc-content">
-                <span class="year"
-                  ><i class="fa fa-calendar" aria-hidden="true"></i>
-                  2022-2024</span
-                >
-                <h3>
-                  Asia Pacific University of Technology and Innovation (APU)
-                </h3>
-                <p>Course: Diploma in IT with specialism in Data Informatics</p>
-                <p>CGPA: 3.88</p>
-              </div>
-            </div>
-            <span class="number-page">2</span>
-
-            <span class="nextprev-btn back" data-page="turn-1">
-              <i class="fa fa-chevron-left" aria-hidden="true"></i>
-            </span>
-          </div>
-        </div>
-
-        <!--Hi-->
-        <div class="book-page page-right turn" id="turn-2">
-          <div class="page-front">
-            <h1 class="title">Awards and certifications</h1>
-            <div class="workeduc-box">
-              <div class="workeduc-content">
-                <span class="year"
-                  ><i class="fa fa-certificate" aria-hidden="true"></i
-                ></span>
-                2024
-                <h3>Cisco Certified Network Associate Security (CCNA)</h3>
-                <p>Demonstrated minimum knowledge of networking</p>
-              </div>
-              <div class="workeduc-content">
-                <span class="year"
-                  ><i class="fa fa-certificate" aria-hidden="true"></i
-                ></span>
-                2023
-                <h3>CodeConnection</h3>
-                <p>Participated in a problem-solving event using Python</p>
-              </div>
-              <div class="workeduc-content">
-                <span class="year"
-                  ><i class="fa fa-certificate" aria-hidden="true"></i
-                ></span>
-                2023
-                <h3>APUBCC X Sparkathon</h3>
-                <p>Secure top 20 position in this Hackathon as the front-end developer</p>
-              </div>
-              <div class="workeduc-content">
-                <span class="year"
-                  ><i class="fa fa-certificate" aria-hidden="true"></i
-                ></span>
-                2022
-                <h3>AWS Deepracer Competition</h3>
-                <p>Shows minimum exposure towards Reinforcement Learning (RL)</p>
-              </div>
-            </div>
-            <span class="number-page">3</span>
-            <span class="nextprev-btn" data-page="turn-2">
-              <i class="fa fa-chevron-right" aria-hidden="true"></i>
-            </span>
-          </div>
-          <div class="page-back">
-            <h1 class="title">My skills</h1>
-            <div class="skills-box">
-              <div class="skills-content">
-                <h3>Programming Languages</h3>
-                <div class="content">
-                  <span
-                    ><img
-                      src="https://e7.pngegg.com/pngimages/621/411/png-clipart-computer-icons-python-anaconda-anaconda-angle-other-thumbnail.png"
-                    />Python</span
-                  >
-                  <span
-                    ><img
-                      src="https://toppng.com/uploads/preview/java-logo-11609365784e4gmvr3iyr.png"
-                    />Java</span
-                  >
-                  <span
-                    ><img
-                      src="https://static.vecteezy.com/system/resources/thumbnails/027/127/560/small_2x/javascript-logo-javascript-icon-transparent-free-png.png"
-                    />Javascript</span
-                  >
-                  <span
-                    ><img
-                      src="data:image/png;base64,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"
-                    />Typescript</span
-                  >
-                  <span
-                    ><img
-                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png"
-                    />React</span
-                  >
-                  <span
-                    ><i class="fa fa-html5" aria-hidden="true"></i>HTML</span
-                  >
-                  <span><i class="fa fa-css3" aria-hidden="true"></i>CSS</span>
-                </div>
-              </div>
-              <div class="skills-content">
-                <h3>Database & Data Analysis</h3>
-                <div class="content">
-                  <span
-                    ><img
-                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs3Tiaiq5sbEliq50vuLYDFDz5xEjY99ueYyEdiOJGCg&s"
-                    />D3.js</span
-                  >
-                  <span
-                    ><img
-                      src="https://styles.redditmedia.com/t5_22lifv/styles/communityIcon_mw6kn5lyiud41.png"
-                    />TensorFlow</span
-                  >
-                  <span
-                    ><img
-                      src="https://static-00.iconduck.com/assets.00/sql-database-sql-azure-icon-976x1024-eobwqz2q.png"
-                    />SQL</span
-                  >
-                  <span
-                    ><img
-                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRW6sIcKO45SgNMCxyj0hR5Pro2rRIOYDJT1prrBDGO7Q&s"
-                    />PHP</span
-                  >
-                  <span
-                    ><img
-                      src="https://w7.pngwing.com/pngs/138/659/png-transparent-tableau-software-hd-logo.png"
-                    />Tableau</span
-                  >
-                  <span
-                    ><img
-                      src="https://avatars.githubusercontent.com/u/4490278?s=280&v=4"
-                    />RapidMiner</span
-                  >
-                </div>
-              </div>
-              <div class="skills-content">
-                <h3>Others</h3>
-                <div class="content">
-                  <span
-                    ><img
-                      src="https://w7.pngwing.com/pngs/684/413/png-transparent-figma-logo-thumbnail-tech-companies-thumbnail.png"
-                    />Figma</span
-                  >
-                  <span
-                    ><img
-                      src="https://banner2.cleanpng.com/20180425/vre/kisspng-node-js-javascript-npm-computer-icons-web-applicat-5ae0f85a094d64.3643429315246930820381.jpg"
-                    />Node.js</span
-                  >
-                  <span
-                    ><img
-                      src="https://i.pinimg.com/originals/ea/27/eb/ea27eb4a6229bfa4fa24cee2e9547c01.png"
-                    />Canva</span
-                  >
-                  <span
-                    ><i class="fa fa-windows" aria-hidden="true"></i>MS
-                    Apps</span
-                  >
-                </div>
-              </div>
-              <span class="number-page">4</span>
-              <span class="nextprev-btn back" data-page="turn-2">
-                <i class="fa fa-chevron-left" aria-hidden="true"></i>
-              </span>
-            </div>
-          </div>
-        </div>
-
-        <!--Hi-->
-        <div class="book-page page-right turn" id="turn-3">
-          <div class="page-front">
-            <h1 class="title">Latest Project</h1>
-
-            <div class="portfolio-box">
-              <div class="img-box">
-                <img src="image.png" alt="Project 1" >
-              </div>
-            </div>
-            <div class="info-box">
-              <div class="info-title">
-                <h3>Intelligent Meter- Inventory Management System</h3>
-              </div>
-              <p><strong>Project Description:</strong></p>
-              <p>Water meter management struggles with forecasting, manual tracking, and disconnected lab results, leading to inefficiency. Smart algorithms are needed for accuracy and efficiency.</p>
-            </div>
-
-            <div class="btn-box">
-              <a href="https://github.com/Lam2y/Hackathon.git" class="btn">Source Code</a>
-              <a href="https://github.com/Lam2y?tab=repositories" class="btn">More Projects</a>
-            </div>
-
-            <span class="number-page">5</span>
-            <span class="nextprev-btn" data-page="turn-3">
-              <i class="fa fa-chevron-right" aria-hidden="true"></i>
-            </span>
-          </div>
-
-          <div class="page-back">
-            <h1 class="title">Contact Me</h1>
-            <div class="contact-box">
-              <form action="#">
-                <input type="text" placeholder="Name" class="field" required>
-                <input type="email" placeholder="Email" class="field" required>
-                <textarea placeholder="Message" name="" id="" cols="30" rows="10" class="field"></textarea>
-                <button type="submit" class="btn" value="Send Message">Send</button>
-              </form>
-            </div>
-        
-          <span class="number-page">6</span>
-              <span class="nextprev-btn back" data-page="turn-3">
-                <i class="fa fa-chevron-left" aria-hidden="true"></i>
-              </span>
-          <a href="#" class="back-profile">
-            <p>Profile</p>
-            <i class="fa fa-user-circle" aria-hidden="true"></i>
-          </a>
-        </div>
-
-        <!--End-->
+        <div class = "mx-5 flex flex-col items-center">
+          <p class="mt-4 text-lg max-w-2xl text-justify">I am a data enthusiast with a strong passion for data visualization and machine learning, focused on transforming complex information into actionable insights. Experience includes creating personal blogs on machine learning algorithms and developing skills in leading business analytics tools. Committed to leveraging data science and analytics to drive impactful solutions and deliver value.</p>
+          <a href="#contact" class="mt-10 px-6 py-3 bg-blue-500 text-white rounded-full shadow-lg text-lg font-semibold hover:bg-blue-600 transition">Contact Me</a>
+        </div>   
       </div>
-    </div>
+  </section>
 
-    <script src="script.js"></script>
-  </body>
+    
+    <!-- Education Section -->
+    <section class="max-w-4xl mx-auto mt-10 p-8 bg-gray-800 shadow-lg rounded-lg">
+        <h2 class="text-3xl font-bold text-blue-400"><i class="fas fa-graduation-cap"></i> Education</h2>
+        <div class="mt-4 border-l-4 border-blue-400 pl-4">
+          <p class="mt-4">🎓 <strong>Asia Pacific University (APU)</strong></p>
+          <p class="mt-2 text-gray-300">📅 2024 - Now</p>
+          <p class="mt-2 text-gray-300">Course: Bachelor of Science (Hons) in Computer Science with specialism in Data Analytics</p>
+        </div>
+        <div class="mt-4 border-l-4 border-blue-400 pl-4">
+          <p class="mt-4">🎓 <strong>Asia Pacific University (APU)</strong></p>
+          <p class="mt-2 text-gray-300">📅 2022 - 2024</p>
+          <p class="mt-2 text-gray-300">Course: Diploma in IT with specialism in Data Informatics</p>
+          <p class="mt-2 text-gray-300">CGPA : 3.89</p>
+        </div>
+    </section>
+    
+    <!-- Experience Section -->
+    <section class="max-w-4xl mx-auto mt-10 p-8 bg-gray-800 shadow-lg rounded-lg">
+        <h2 class="text-3xl font-bold text-blue-400"><i class="fas fa-briefcase"></i> Experience</h2>
+        <div class="mt-4 border-l-4 border-blue-400 pl-4">
+            <p class="text-lg font-semibold">Web Scraping Developer - Graymatter Forensic Advisory Sdn Bhd</p>
+            <p class="text-gray-300">📅 Feb 2025 – Present</p>
+            <p class="mt-2">• Developed web scraping scripts using Python and BeautifulSoup to extract and process risk-related data. Built a Flask-based API to serve scraped data, ensuring efficient retrieval and integration.</p>
+        </div>
+        <div class="mt-4 border-l-4 border-blue-400 pl-4">
+          <p class="text-lg font-semibold">Software Developer Intern - Rocketsview Management Sdn Bhd</p>
+          <p class="text-gray-300">📅 Jul 2024 – Sep 2024</p>
+          <p class="mt-2">• Assisted in front-end development of Halo Telco website using modern frameworks.</p>
+        </div>
+        <div class="mt-4 border-l-4 border-blue-400 pl-4">
+          <p class="text-lg font-semibold">Teaching Assistant - VGRO Education Group </p>
+          <p class="text-gray-300">📅 Apr 2022 - Jun 2022</p>
+          <p class="mt-2">• Assist in PWP slides preparation, grading student's assessments , entering student's information into database and providing feedback on child's performance to parents.</p>
+        </div>
+    </section>
+    
+    <!-- Skills Section -->
+    <section class="max-w-4xl mx-auto mt-10 p-8 bg-gray-800 shadow-lg rounded-lg">
+        <h2 class="text-3xl font-bold text-blue-400"><i class="fas fa-tools"></i> Skills</h2>
+        <div class="mt-4 border-l-4 border-blue-400 pl-4">
+          <p class="text-lg font-semibold">Programming & Development</p>
+          <li class="text-gray-300 text-sm">Python (Pandas, Numpy, Scikit-learn, Matplotlib, BeautifulSoup, Flask)</p>
+          <li class="text-gray-300 text-sm">Object-oriented programming for Java</p>
+          <li class="text-gray-300 text-sm">R for statistical programming</p>
+          <li class="text-gray-300 text-sm">SQL (PostgreSQL, SSMS, MySQL)</p>
+          <li class="text-gray-300 text-sm">SAS</p>
+        </div>
+        <div class="mt-4 border-l-4 border-blue-400 pl-4">
+          <p class="text-lg font-semibold">Data Analytics & Visualization</p>
+          <li class="text-gray-300 text-sm">Power BI</p>
+          <li class="text-gray-300 text-sm">Tableau</p>
+          <li class="text-gray-300 text-sm">Google Data Studio</p>
+          <li class="text-gray-300 text-sm">Microsoft Excel</p>
+        </div>
+        <div class="mt-4 border-l-4 border-blue-400 pl-4">
+          <p class="text-lg font-semibold">Web Development & Design</p>
+          <li class="text-gray-300 text-sm">Laravel PHP</p>
+          <li class="text-gray-300 text-sm">Tailwind CSS</p>
+          <li class="text-gray-300 text-sm">Alpine.js</p>
+          <li class="text-gray-300 text-sm">Figma</p>
+        </div>
+        <div class="mt-4 border-l-4 border-blue-400 pl-4">
+          <p class="text-lg font-semibold">Version Control & Collaboration</p>
+          <li class="text-gray-300 text-sm">Git</p>
+          <li class="text-gray-300 text-sm">Github</p>
+          <li class="text-gray-300 text-sm">Microsoft PowerPoint</p>
+        </div>
+    </section>
+    
+    <!-- Projects Section -->
+    <section class="max-w-4xl mx-auto mt-10 p-8 bg-gray-800 shadow-lg rounded-lg">
+        <h2 class="text-3xl font-bold text-blue-400"><i class="fas fa-project-diagram"></i> Projects</h2>
+        <div class="mt-4 border-l-4 border-blue-400 pl-4">
+            <p class="text-lg font-semibold">📊 Data Visualization</p>
+            <p class="text-gray-300">• Created interactive dashboards in Tableau and Power BI.</p>
+        </div>
+        <div class="mt-4 border-l-4 border-blue-400 pl-4">
+            <p class="text-lg font-semibold">🤖 Machine Learning</p>
+            <p class="text-gray-300">• Built predictive models using Python and TensorFlow.</p>
+        </div>
+    </section>
+    
+    <!-- Certifications Section -->
+    <section class="max-w-4xl mx-auto mt-10 p-8 bg-gray-800 shadow-lg rounded-lg">
+        <h2 class="text-3xl font-bold text-blue-400"><i class="fas fa-certificate"></i>Events and Certifications</h2>
+          <div class="mt-4 border-l-4 border-blue-400 pl-4">
+              <p class="text-lg font-semibold">🏆 AWS Deepracer Competition</p>
+              <p class="text-gray-300 text-sm">Trained virtual cars to run laps using reinforcement learning algorithms.</p>
+          </div>
+      
+          <div class="mt-4 border-l-4 border-blue-400 pl-4">
+              <p class="text-lg font-semibold">🏆 APUBCC Sparkathon - Top 20 Winner</p>
+              <p class="text-gray-300 text-sm">Built a fundraising website using the Solana platform and cryptocurrency as a trading unit.</p>
+          </div>
+      
+          <div class="mt-4 border-l-4 border-blue-400 pl-4">
+              <p class="text-lg font-semibold">🏆 Cisco Certified Network Associate (CCNA) Security</p>
+              <p class="text-gray-300 text-sm">Gained expertise in networking, IP addressing, and connecting to routers and switches.</p>
+          </div>
+      
+          <div class="mt-4 border-l-4 border-blue-400 pl-4">
+              <p class="text-lg font-semibold">🏆 CodeConnection Competition</p>
+              <p class="text-gray-300 text-sm">Solved complex problems using Python.</p>
+          </div>
+      
+          <div class="mt-4 border-l-4 border-blue-400 pl-4">
+              <p class="text-lg font-semibold">🏆 Digital Air Selangor Hackathon</p>
+              <p class="text-gray-300 text-sm">Developed an inventory management system for a water meter company with features like dashboards, stock tracking, complaints management, and demand forecasting.</p>
+          </div>
+      
+          <div class="mt-4 border-l-4 border-blue-400 pl-4">
+              <p class="text-lg font-semibold">🏆 Google Workspace Hackathon 2024 - Participant</p>
+              <p class="text-gray-300 text-sm">Built a finance management system using Google Apps like AppSheet, Data Studio, and App Script.</p>
+          </div>
+      
+          <div class="mt-4 border-l-4 border-blue-400 pl-4">
+              <p class="text-lg font-semibold">🏆 UMDAC Datathon</p>
+              <p class="text-gray-300 text-sm">Developed stock price prediction models with entry and exit signal generation.</p>
+          </div>
+      
+        <!-- <p class="mt-2">🏆 UM Hackathon 2025</p> -->
+        <!-- <p class="mt-2">🏆 ASEAN Data Science Explorers </p> -->
+        <!-- <p class="mt-2">🏆 Alibaba Cloud Malaysia AI Hackathon 2025</p> -->
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="max-w-4xl mx-auto mt-10 p-8 bg-gray-800 shadow-lg rounded-lg text-center">
+        <h2 class="text-3xl font-bold text-blue-400"><i class="fas fa-envelope"></i> Contact</h2>
+        <p class="mt-4">📧 Email: <a href="mailto:lamyuyan2004@gmail.com" class="text-blue-400 hover:underline">lamyuyan2004@gmail.com</a></p>
+        <p class="mt-2">🔗 LinkedIn: <a href="https://www.linkedin.com/in/lam-yu-yan-267777249/" class="text-blue-400 hover:underline">lam-yu-yan</a></p>
+        <p class="mt-2">💻 GitHub: <a href="https://github.com/Lam2y" class="text-blue-400 hover:underline">Lam2y</a></p>
+    </section>
+</body>
 </html>
