@@ -1,165 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lam Yu Yan - Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lam Yu Yan | Data Analytics Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <style>
+    body {
+      background: linear-gradient(135deg, #0a192f 0%, #102840 50%, #1f2937 100%);
+      font-family: 'Segoe UI', sans-serif;
+      overflow-x: hidden;
+    }
+    .glass {
+      background: rgba(255, 255, 255, 0.07);
+      backdrop-filter: blur(16px);
+      border-radius: 1rem;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      animation: fadeInUp 1s ease-out;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .gradient-text {
+      background: linear-gradient(to right, #00f5a0, #00d9f5);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hover-glow:hover {
+      transform: scale(1.05);
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0 0 20px #00d9f5;
+    }
+  </style>
 </head>
-<body class="bg-gray-900 text-white font-sans">
-    <header class="bg-gradient-to-r from-blue-500 to-purple-600 p-6 text-center text-2xl font-bold shadow-lg">Welcome to my Portfolio Website</header>
-    
-    <!-- Hero Section -->
-    <section class = "flex items-center justify-center text-center py-10 lg:py-20 px-6 bg-gray-900">
-      <div class = "flex flex-col lg:flex-row justify-center items-center">
-        <div class = "mx-5">
-          <div class = "flex justify-center items-center">
-            <img src="profile.jpg" alt="Profile Picture" class="w-40 h-40 rounded-full border-4 border-blue-400 shadow-lg">
-          </div>
-          <h1 class="text-5xl font-extrabold mt-6">Hello, I'm</h1>
-          <span class="text-5xl font-extrabold mt-6 text-blue-400">Lam Yu Yan</span>
-          <p class="text-gray-300 mt-4 text-lg">Data Analytics Student</p>
-        </div>
-        <div class = "mx-5 flex flex-col items-center">
-          <p class="mt-4 text-lg max-w-2xl text-justify">I am a data enthusiast with a strong passion for data visualization and machine learning, focused on transforming complex information into actionable insights. Experience includes creating personal blogs on machine learning algorithms and developing skills in leading business analytics tools. Committed to leveraging data science and analytics to drive impactful solutions and deliver value.</p>
-          <a href="#contact" class="mt-10 px-6 py-3 bg-blue-500 text-white rounded-full shadow-lg text-lg font-semibold hover:bg-blue-600 transition">Contact Me</a>
-        </div>   
+<body class="text-white">
+  <!-- Navigation -->
+<header class="relative z-50">
+  <div class="flex justify-between items-center p-5 bg-white bg-opacity-10 backdrop-blur-lg shadow-md">
+    <h1 class="text-xl font-bold gradient-text">Lam Yu Yan</h1>
+    <div class="md:hidden">
+      <button id="menu-btn" class="text-white text-3xl focus:outline-none">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    <nav class="hidden md:flex gap-6 text-sm">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#competitions">Competitions</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+  <!-- Slide-in Mobile Menu Left -->
+  <div id="mobile-menu" class="fixed top-0 left-0 h-full w-2/3 max-w-xs bg-black bg-opacity-90 text-white transform -translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col items-start pt-20 pl-8 space-y-6 z-40">
+    <button id="close-btn" class="text-white text-2xl self-end pr-4 absolute top-4 right-4">
+      <i class="fas fa-times"></i>
+    </button>
+    <a href="#about" class="block w-full text-left">About</a>
+    <a href="#skills" class="block w-full text-left">Skills</a>
+    <a href="#projects" class="block w-full text-left">Projects</a>
+    <a href="#experience" class="block w-full text-left">Experience</a>
+    <a href="#education" class="block w-full text-left">Education</a>
+    <a href="#competitions">Competitions</a>
+    <a href="#contact" class="block w-full text-left">Contact</a>
+  </div>
+</header>
+
+  <!-- Hero Section -->
+  <section class="min-h-screen flex flex-col justify-center items-center text-center p-10 animate-fade-in">
+    <div class="glass p-10 max-w-3xl hover-glow">
+      <img src="profile.jpg" alt="Lam Yu Yan Profile" class="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-white shadow-lg" />
+      <h1 class="text-5xl font-extrabold mb-4 gradient-text">Hi, I’m Lam Yu Yan</h1>
+      <p class="text-xl mb-6 italic text-gray-300">
+        <span id="typed-text">Aspiring Data Analyst</span>
+        <noscript><em>Aspiring Data Analyst | Tech Enthusiast | AI Explorer</em></noscript>
+      </p>
+      <div class="flex justify-center gap-8 text-3xl">
+        <a href="https://github.com/Lam2y" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/lam-yu-yan-267777249" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:lamyuyan2004@gmail.com"><i class="fas fa-envelope"></i></a>
       </div>
+    </div>
   </section>
 
-    
-    <!-- Education Section -->
-    <section class="max-w-4xl mx-auto mt-10 p-8 bg-gray-800 shadow-lg rounded-lg">
-        <h2 class="text-3xl font-bold text-blue-400"><i class="fas fa-graduation-cap"></i> Education</h2>
-        <div class="mt-4 border-l-4 border-blue-400 pl-4">
-          <p class="mt-4">🎓 <strong>Asia Pacific University (APU)</strong></p>
-          <p class="mt-2 text-gray-300">📅 2024 - Now</p>
-          <p class="mt-2 text-gray-300">Course: Bachelor of Science (Hons) in Computer Science with specialism in Data Analytics</p>
-        </div>
-        <div class="mt-4 border-l-4 border-blue-400 pl-4">
-          <p class="mt-4">🎓 <strong>Asia Pacific University (APU)</strong></p>
-          <p class="mt-2 text-gray-300">📅 2022 - 2024</p>
-          <p class="mt-2 text-gray-300">Course: Diploma in IT with specialism in Data Informatics</p>
-          <p class="mt-2 text-gray-300">CGPA : 3.89</p>
-        </div>
-    </section>
-    
-    <!-- Experience Section -->
-    <section class="max-w-4xl mx-auto mt-10 p-8 bg-gray-800 shadow-lg rounded-lg">
-        <h2 class="text-3xl font-bold text-blue-400"><i class="fas fa-briefcase"></i> Experience</h2>
-        <div class="mt-4 border-l-4 border-blue-400 pl-4">
-            <p class="text-lg font-semibold">Web Scraping Developer - Graymatter Forensic Advisory Sdn Bhd</p>
-            <p class="text-gray-300">📅 Feb 2025 – Present</p>
-            <p class="mt-2">• Developed web scraping scripts using Python and BeautifulSoup to extract and process risk-related data. Built a Flask-based API to serve scraped data, ensuring efficient retrieval and integration.</p>
-        </div>
-        <div class="mt-4 border-l-4 border-blue-400 pl-4">
-          <p class="text-lg font-semibold">Software Developer Intern - Rocketsview Management Sdn Bhd</p>
-          <p class="text-gray-300">📅 Jul 2024 – Sep 2024</p>
-          <p class="mt-2">• Assisted in front-end development of Halo Telco website using modern frameworks.</p>
-        </div>
-        <div class="mt-4 border-l-4 border-blue-400 pl-4">
-          <p class="text-lg font-semibold">Teaching Assistant - VGRO Education Group </p>
-          <p class="text-gray-300">📅 Apr 2022 - Jun 2022</p>
-          <p class="mt-2">• Assist in PWP slides preparation, grading student's assessments , entering student's information into database and providing feedback on child's performance to parents.</p>
-        </div>
-    </section>
-    
-    <!-- Skills Section -->
-    <section class="max-w-4xl mx-auto mt-10 p-8 bg-gray-800 shadow-lg rounded-lg">
-        <h2 class="text-3xl font-bold text-blue-400"><i class="fas fa-tools"></i> Skills</h2>
-        <div class="mt-4 border-l-4 border-blue-400 pl-4">
-          <p class="text-lg font-semibold">Programming & Development</p>
-          <li class="text-gray-300 text-sm">Python (Pandas, Numpy, Scikit-learn, Matplotlib, BeautifulSoup, Flask)</p>
-          <li class="text-gray-300 text-sm">Object-oriented programming for Java</p>
-          <li class="text-gray-300 text-sm">R for statistical programming</p>
-          <li class="text-gray-300 text-sm">SQL (PostgreSQL, SSMS, MySQL)</p>
-          <li class="text-gray-300 text-sm">SAS</p>
-        </div>
-        <div class="mt-4 border-l-4 border-blue-400 pl-4">
-          <p class="text-lg font-semibold">Data Analytics & Visualization</p>
-          <li class="text-gray-300 text-sm">Power BI</p>
-          <li class="text-gray-300 text-sm">Tableau</p>
-          <li class="text-gray-300 text-sm">Google Data Studio</p>
-          <li class="text-gray-300 text-sm">Microsoft Excel</p>
-        </div>
-        <div class="mt-4 border-l-4 border-blue-400 pl-4">
-          <p class="text-lg font-semibold">Web Development & Design</p>
-          <li class="text-gray-300 text-sm">Laravel PHP</p>
-          <li class="text-gray-300 text-sm">Tailwind CSS</p>
-          <li class="text-gray-300 text-sm">Alpine.js</p>
-          <li class="text-gray-300 text-sm">Figma</p>
-        </div>
-        <div class="mt-4 border-l-4 border-blue-400 pl-4">
-          <p class="text-lg font-semibold">Version Control & Collaboration</p>
-          <li class="text-gray-300 text-sm">Git</p>
-          <li class="text-gray-300 text-sm">Github</p>
-          <li class="text-gray-300 text-sm">Microsoft PowerPoint</p>
-        </div>
-    </section>
-    
-    <!-- Projects Section -->
-    <section class="max-w-4xl mx-auto mt-10 p-8 bg-gray-800 shadow-lg rounded-lg">
-        <h2 class="text-3xl font-bold text-blue-400"><i class="fas fa-project-diagram"></i> Projects</h2>
-        <div class="mt-4 border-l-4 border-blue-400 pl-4">
-            <p class="text-lg font-semibold">📊 Data Visualization</p>
-            <p class="text-gray-300">• Created interactive dashboards in Tableau and Power BI.</p>
-        </div>
-        <div class="mt-4 border-l-4 border-blue-400 pl-4">
-            <p class="text-lg font-semibold">🤖 Machine Learning</p>
-            <p class="text-gray-300">• Built predictive models using Python and TensorFlow.</p>
-        </div>
-    </section>
-    
-    <!-- Certifications Section -->
-    <section class="max-w-4xl mx-auto mt-10 p-8 bg-gray-800 shadow-lg rounded-lg">
-        <h2 class="text-3xl font-bold text-blue-400"><i class="fas fa-certificate"></i>Events and Certifications</h2>
-          <div class="mt-4 border-l-4 border-blue-400 pl-4">
-              <p class="text-lg font-semibold">🏆 AWS Deepracer Competition</p>
-              <p class="text-gray-300 text-sm">Trained virtual cars to run laps using reinforcement learning algorithms.</p>
-          </div>
-      
-          <div class="mt-4 border-l-4 border-blue-400 pl-4">
-              <p class="text-lg font-semibold">🏆 APUBCC Sparkathon - Top 20 Winner</p>
-              <p class="text-gray-300 text-sm">Built a fundraising website using the Solana platform and cryptocurrency as a trading unit.</p>
-          </div>
-      
-          <div class="mt-4 border-l-4 border-blue-400 pl-4">
-              <p class="text-lg font-semibold">🏆 Cisco Certified Network Associate (CCNA) Security</p>
-              <p class="text-gray-300 text-sm">Gained expertise in networking, IP addressing, and connecting to routers and switches.</p>
-          </div>
-      
-          <div class="mt-4 border-l-4 border-blue-400 pl-4">
-              <p class="text-lg font-semibold">🏆 CodeConnection Competition</p>
-              <p class="text-gray-300 text-sm">Solved complex problems using Python.</p>
-          </div>
-      
-          <div class="mt-4 border-l-4 border-blue-400 pl-4">
-              <p class="text-lg font-semibold">🏆 Digital Air Selangor Hackathon</p>
-              <p class="text-gray-300 text-sm">Developed an inventory management system for a water meter company with features like dashboards, stock tracking, complaints management, and demand forecasting.</p>
-          </div>
-      
-          <div class="mt-4 border-l-4 border-blue-400 pl-4">
-              <p class="text-lg font-semibold">🏆 Google Workspace Hackathon 2024 - Participant</p>
-              <p class="text-gray-300 text-sm">Built a finance management system using Google Apps like AppSheet, Data Studio, and App Script.</p>
-          </div>
-      
-          <div class="mt-4 border-l-4 border-blue-400 pl-4">
-              <p class="text-lg font-semibold">🏆 UMDAC Datathon</p>
-              <p class="text-gray-300 text-sm">Developed stock price prediction models with entry and exit signal generation.</p>
-          </div>
-      
-        <!-- <p class="mt-2">🏆 UM Hackathon 2025</p> -->
-        <!-- <p class="mt-2">🏆 ASEAN Data Science Explorers </p> -->
-        <!-- <p class="mt-2">🏆 Alibaba Cloud Malaysia AI Hackathon 2025</p> -->
-    </section>
-    
-    <!-- Contact Section -->
-    <section id="contact" class="max-w-4xl mx-auto mt-10 p-8 bg-gray-800 shadow-lg rounded-lg text-center">
-        <h2 class="text-3xl font-bold text-blue-400"><i class="fas fa-envelope"></i> Contact</h2>
-        <p class="mt-4">📧 Email: <a href="mailto:lamyuyan2004@gmail.com" class="text-blue-400 hover:underline">lamyuyan2004@gmail.com</a></p>
-        <p class="mt-2">🔗 LinkedIn: <a href="https://www.linkedin.com/in/lam-yu-yan-267777249/" class="text-blue-400 hover:underline">lam-yu-yan</a></p>
-        <p class="mt-2">💻 GitHub: <a href="https://github.com/Lam2y" class="text-blue-400 hover:underline">Lam2y</a></p>
-    </section>
+
+  <!-- About Section -->
+  <section id="about" class="p-10">
+    <div class="glass p-8 max-w-4xl mx-auto hover-glow">
+      <h2 class="text-3xl font-bold mb-4 gradient-text">About Me</h2>
+      <p class="leading-relaxed text-gray-200">I am a data enthusiast with a strong passion for data visualization and machine learning, focused on transforming complex information into actionable insights. Experience includes creating personal blogs on machine learning algorithms and developing skills in leading business analytics tools. Committed to leveraging data science and analytics to drive impactful solutions and deliver value.</p>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="p-10">
+    <div class="glass p-8 max-w-4xl mx-auto hover-glow">
+      <h2 class="text-3xl font-bold mb-4 gradient-text">Education</h2>
+      <ul class="list-disc ml-6 text-gray-200">
+        <li><strong>Bachelor of Computer Science (Data Analytics)</strong> — Asia Pacific University, Kuala Lumpur (Nov 2024 – Present, Graduating Nov 2026)</li>
+        <li><strong>Diploma in IT (Data Informatics)</strong> — Asia Pacific University, Kuala Lumpur (Jul 2022 – Jul 2024), CGPA: 3.89 (Distinction)</li>
+      </ul>
+    </div>
+  </section>
+  
+    <!-- Skills -->
+  <section id="skills" class="p-10">
+    <div class="glass p-8 max-w-5xl mx-auto hover-glow">
+      <h2 class="text-3xl font-bold mb-6 gradient-text">Technical Skills</h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4 text-sm text-gray-100">
+        <div><i class="fas fa-database"></i> SQL, MySQL, PostgreSQL</div>
+        <div><i class="fas fa-chart-line"></i> Tableau, Power BI, Google Data Studio</div>
+        <div><i class="fab fa-python"></i> Python (NumPy, Pandas, Matplotlib, Seaborn, Flask, BeautifulSoup)</div>
+        <div><i class="fab fa-r-project"></i> R, Java, SAS, C++</div>
+        <div><i class="fas fa-code"></i> HTML, CSS, JavaScript, Laravel PHP, Tailwind CSS, Alpine.js, Swiper.js</div>
+        <div><i class="fas fa-code-branch"></i> Git, GitHub Desktop</div>
+        <div><i class="fas fa-robot"></i> Machine Learning: scikit-learn</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="p-10">
+    <div class="glass p-8 max-w-5xl mx-auto hover-glow">
+      <h2 class="text-3xl font-bold mb-6 gradient-text">Projects</h2>
+      <ul class="list-disc ml-6 text-gray-200">
+        <li><strong>Interactive Data Visualization:</strong> Built Tableau and Power BI dashboards for insights.</li>
+        <li><strong>Stock Prediction Model:</strong> Used ensemble ML models to forecast prices.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="p-10">
+    <div class="glass p-8 max-w-5xl mx-auto hover-glow">
+      <h2 class="text-3xl font-bold mb-6 gradient-text">Experience</h2>
+      <div class="mb-6">
+        <h3 class="font-bold text-lg">Freelance Web Scraping Developer – Graymatter (Feb 2025 – Now)</h3>
+        <p class="text-gray-200">Developed BeautifulSoup + PostgreSQL pipelines for structured data.</p>
+      </div>
+      <div class="mb-6">
+        <h3 class="font-bold text-lg">Software Intern – Rocketsview (Jul 2024 – Sep 2024)</h3>
+        <p class="text-gray-200">Contributed to front-end development for Halo Telco.</p>
+      </div>
+      <div>
+        <h3 class="font-bold text-lg">Teaching Assistant – VGRO Education (Apr 2022 – Jun 2022)</h3>
+        <p class="text-gray-200">Prepared slides, graded work, managed records.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Competitions -->
+  <section class="p-10">
+    <div class="glass p-8 max-w-5xl mx-auto hover-glow">
+      <h2 class="text-3xl font-bold mb-6 gradient-text">Competitions & Certifications</h2>
+      <ul class="list-disc ml-6 text-gray-200">
+        <li>Top 20 Winner – APUBCC Sparkathon</li>
+        <li>AWS DeepRacer – RL Car Training</li>
+        <li>CCNA Security – Cisco Certified</li>
+        <li>CodeConnection – Python Algorithm Contest</li>
+        <li>Air Selangor Hackathon – Forecast Dashboard</li>
+        <li>Google Workspace Hackathon – AppSheet System</li>
+        <li>UMDAC – Stock Prediction Logic</li>
+        <li>UM Hackathon – GrabPT AI Bot</li>
+        <li>AI Veracity – No Waste Kitchen</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="p-10 text-center">
+    <div class="glass p-8 max-w-3xl mx-auto hover-glow">
+      <h2 class="text-3xl font-bold mb-4 gradient-text">Let's Connect</h2>
+      <p class="text-gray-200">📧 lamyuyan2004@gmail.com</p>
+      <p class="text-gray-200">📱 +60 173098938</p>
+      <p class="mt-2 text-gray-400">Location: Kuala Lumpur, Malaysia</p>
+      <p class="mt-2 text-gray-400">Expected Graduation: Nov 2026</p>
+    </div>
+  </section>
+
+  <!-- JS for Hamburger Menu and Typing -->
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const closeBtn = document.getElementById('close-btn');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.remove('-translate-x-full');
+      mobileMenu.classList.add('translate-x-0');
+    });
+
+    closeBtn.addEventListener('click', () => {
+      mobileMenu.classList.add('-translate-x-full');
+      mobileMenu.classList.remove('translate-x-0');
+    });
+
+    // Optional: Close menu when any link is clicked
+    const links = mobileMenu.querySelectorAll('a');
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('-translate-x-full');
+        mobileMenu.classList.remove('translate-x-0');
+      });
+    });
+
+
+
+    new Typed("#typed-text", {
+      strings: ["Aspiring Data Analyst", "Tech Enthusiast", "AI Explorer"],
+      typeSpeed: 60,
+      backSpeed: 40,
+      backDelay: 1500,
+      loop: true
+    });
+  </script>
 </body>
 </html>
