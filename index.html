@@ -9,7 +9,7 @@
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <style>
     body {
-      background: linear-gradient(135deg, #0a192f 0%, #102840 50%, #1f2937 100%);
+      background: linear-gradient(135deg, #1a2b4c 0%, #1e3a5f 50%, #2b3e50 100%);
       font-family: 'Segoe UI', sans-serif;
       overflow-x: hidden;
     }
@@ -38,77 +38,113 @@
 </head>
 <body class="text-white">
   <!-- Navigation -->
-<header class="relative z-50">
-  <div class="flex justify-between items-center p-5 bg-white bg-opacity-10 backdrop-blur-lg shadow-md">
-    <h1 class="text-xl font-bold gradient-text">Lam Yu Yan</h1>
-    <div class="md:hidden">
-      <button id="menu-btn" class="text-white text-3xl focus:outline-none">
-        <i class="fas fa-bars"></i>
-      </button>
+  <header class="relative z-50">
+    <div class="flex justify-between items-center p-5 bg-white bg-opacity-10 backdrop-blur-lg shadow-md">
+      <h1 class="text-xl font-bold gradient-text">Lam Yu Yan</h1>
+      <div class="md:hidden">
+        <button id="menu-btn" class="text-white text-3xl focus:outline-none">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+      <nav class="hidden md:flex gap-6 text-sm">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#competitions">Competitions</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
-    <nav class="hidden md:flex gap-6 text-sm">
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#experience">Experience</a>
-      <a href="#education">Education</a>
-      <a href="#competitions">Competitions</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
-  <!-- Slide-in Mobile Menu Left -->
-  <div id="mobile-menu" class="fixed top-0 left-0 h-full w-2/3 max-w-xs bg-black bg-opacity-90 text-white transform -translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col items-start pt-20 pl-8 space-y-6 z-40">
-    <button id="close-btn" class="text-white text-2xl self-end pr-4 absolute top-4 right-4">
-      <i class="fas fa-times"></i>
-    </button>
-    <a href="#about" class="block w-full text-left">About</a>
-    <a href="#skills" class="block w-full text-left">Skills</a>
-    <a href="#projects" class="block w-full text-left">Projects</a>
-    <a href="#experience" class="block w-full text-left">Experience</a>
-    <a href="#education" class="block w-full text-left">Education</a>
-    <a href="#competitions">Competitions</a>
-    <a href="#contact" class="block w-full text-left">Contact</a>
-  </div>
-</header>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed top-0 left-0 h-full w-2/3 max-w-xs bg-black bg-opacity-90 text-white transform -translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col items-start pt-20 pl-8 space-y-6 z-40">
+      <button id="close-btn" class="text-white text-2xl self-end pr-4 absolute top-4 right-4">
+        <i class="fas fa-times"></i>
+      </button>
+      <a href="#about" class="block w-full text-left">About</a>
+      <a href="#skills" class="block w-full text-left">Skills</a>
+      <a href="#projects" class="block w-full text-left">Projects</a>
+      <a href="#experience" class="block w-full text-left">Experience</a>
+      <a href="#education" class="block w-full text-left">Education</a>
+      <a href="#competitions" class="block w-full text-left">Competitions</a>
+      <a href="#contact" class="block w-full text-left">Contact</a>
+    </div>
+  </header>
 
-  <!-- Hero Section -->
-  <section class="min-h-screen flex flex-col justify-center items-center text-center p-10 animate-fade-in">
-    <div class="glass p-10 max-w-3xl hover-glow">
-      <img src="profile.jpg" alt="Lam Yu Yan Profile" class="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-white shadow-lg" />
-      <h1 class="text-5xl font-extrabold mb-4 gradient-text">Hi, I’m Lam Yu Yan</h1>
-      <p class="text-xl mb-6 italic text-gray-300">
-        <span id="typed-text">Aspiring Data Analyst</span>
-        <noscript><em>Aspiring Data Analyst | Tech Enthusiast | AI Explorer</em></noscript>
+
+<!-- Hero Section -->
+<section class="min-h-screen flex flex-col justify-center items-center text-center p-10 animate-fade-in">
+  <div class="glass p-10 max-w-4xl w-full hover-glow">
+    <div class="flex flex-col md:flex-row items-center gap-10">
+      
+      <!-- Profile Image and Info -->
+      <div class="flex flex-col items-center text-center md:w-1/2">
+        <img src="profile.jpg" alt="Lam Yu Yan Profile" class="w-32 h-32 rounded-full mb-4 border-4 border-white shadow-lg" />
+        <h1 class="text-4xl font-extrabold gradient-text mb-2">Hi, I’m Lam Yu Yan</h1>
+        <p class="text-lg italic text-gray-300 mb-4">
+          <span id="typed-text"></span>
+        </p>
+        <div class="flex justify-center gap-6 text-2xl">
+          <a href="https://github.com/Lam2y" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/in/lam-yu-yan-267777249" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="mailto:lamyuyan2004@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+
+      <!-- Video from Google Drive -->
+      <div class="w-full md:w-1/2">
+        <iframe src="https://drive.google.com/file/d/1C02keNYk5LvWe2HpRfuTcdu9ot7fkHCJ/preview"
+                class="w-full h-64 rounded-xl shadow-lg"
+                allow="autoplay"
+                allowfullscreen>
+        </iframe>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- About -->
+  <section id="about" class="p-10">
+    <div class="glass p-8 max-w-4xl mx-auto hover-glow">
+      <h2 class="text-3xl font-bold mb-4 gradient-text">About Me</h2>
+      <p class="leading-relaxed text-gray-200">
+        I am a data enthusiast with a strong passion for data visualization and machine learning, focused on transforming complex information into actionable insights. Experience includes creating personal blogs on machine learning algorithms and developing skills in leading business analytics tools. Committed to leveraging data science and analytics to drive impactful solutions and deliver value.
       </p>
-      <div class="flex justify-center gap-8 text-3xl">
-        <a href="https://github.com/Lam2y" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://linkedin.com/in/lam-yu-yan-267777249" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="mailto:lamyuyan2004@gmail.com"><i class="fas fa-envelope"></i></a>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education" class="p-10">
+    <div class="glass p-8 max-w-4xl mx-auto hover-glow">
+      <h2 class="text-3xl font-bold mb-6 gradient-text">Education</h2>
+      <div class="space-y-6 text-gray-200">
+        <div>
+          <h3 class="font-semibold text-lg">Bachelor of Computer Science (Hons) in Data Analytics</h3>
+          <p>Asia Pacific University of Technology and Innovation (APU), Kuala Lumpur</p>
+          <p>Nov 2024 – Present</p>
+          <p>Expected Graduation: Nov 2026</p>
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg">Diploma in Information Technology (Data Informatics)</h3>
+          <p>Asia Pacific University of Technology and Innovation (APU), Kuala Lumpur</p>
+          <p>Jul 2022 – Jul 2024</p>
+          <p>CGPA: 3.89 (Distinction)</p>
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg">Sijil Pelajaran Malaysia (SPM)</h3>
+          <p>SMK Bandar Baru Sungai Long</p>
+          <p>Jan 2017 – Jan 2021</p>
+          <p>Results: 8A+ 2A (Top Student)</p>
+        </div>
       </div>
     </div>
   </section>
 
 
-  <!-- About Section -->
-  <section id="about" class="p-10">
-    <div class="glass p-8 max-w-4xl mx-auto hover-glow">
-      <h2 class="text-3xl font-bold mb-4 gradient-text">About Me</h2>
-      <p class="leading-relaxed text-gray-200">I am a data enthusiast with a strong passion for data visualization and machine learning, focused on transforming complex information into actionable insights. Experience includes creating personal blogs on machine learning algorithms and developing skills in leading business analytics tools. Committed to leveraging data science and analytics to drive impactful solutions and deliver value.</p>
-    </div>
-  </section>
-
-  <!-- Education Section -->
-  <section id="education" class="p-10">
-    <div class="glass p-8 max-w-4xl mx-auto hover-glow">
-      <h2 class="text-3xl font-bold mb-4 gradient-text">Education</h2>
-      <ul class="list-disc ml-6 text-gray-200">
-        <li><strong>Bachelor of Computer Science (Data Analytics)</strong> — Asia Pacific University, Kuala Lumpur (Nov 2024 – Present, Graduating Nov 2026)</li>
-        <li><strong>Diploma in IT (Data Informatics)</strong> — Asia Pacific University, Kuala Lumpur (Jul 2022 – Jul 2024), CGPA: 3.89 (Distinction)</li>
-      </ul>
-    </div>
-  </section>
-  
-    <!-- Skills -->
+  <!-- Skills -->
   <section id="skills" class="p-10">
     <div class="glass p-8 max-w-5xl mx-auto hover-glow">
       <h2 class="text-3xl font-bold mb-6 gradient-text">Technical Skills</h2>
@@ -144,7 +180,7 @@
         <p class="text-gray-200">Developed BeautifulSoup + PostgreSQL pipelines for structured data.</p>
       </div>
       <div class="mb-6">
-        <h3 class="font-bold text-lg">Software Intern – Rocketsview (Jul 2024 – Sep 2024)</h3>
+        <h3 class="font-bold text-lg">Software Developer Intern – Rocketsview (Jul 2024 – Sep 2024)</h3>
         <p class="text-gray-200">Contributed to front-end development for Halo Telco.</p>
       </div>
       <div>
@@ -154,23 +190,24 @@
     </div>
   </section>
 
-  <!-- Competitions -->
-  <section id="competitions" class="p-10">
-    <div class="glass p-8 max-w-5xl mx-auto hover-glow">
-      <h2 class="text-3xl font-bold mb-6 gradient-text">Competitions & Certifications</h2>
-      <ul class="list-disc ml-6 text-gray-200">
-        <li>Top 20 Winner – APUBCC Sparkathon</li>
-        <li>AWS DeepRacer – RL Car Training</li>
-        <li>CCNA Security – Cisco Certified</li>
-        <li>CodeConnection – Python Algorithm Contest</li>
-        <li>Air Selangor Hackathon – Forecast Dashboard</li>
-        <li>Google Workspace Hackathon – AppSheet System</li>
-        <li>UMDAC – Stock Prediction Logic</li>
-        <li>UM Hackathon – GrabPT AI Bot</li>
-        <li>AI Veracity – No Waste Kitchen</li>
-      </ul>
-    </div>
-  </section>
+<!-- Competitions -->
+<section id="competitions" class="p-10">
+  <div class="glass p-8 max-w-5xl mx-auto hover-glow">
+    <h2 class="text-3xl font-bold mb-6 gradient-text">Competitions & Certifications</h2>
+    <ul class="list-disc ml-6 text-gray-200">
+      <li>Top 20 Winner – APUBCC Sparkathon – Built a fundraising website using Solana and crypto.</li>
+      <li>AWS DeepRacer Competition – Trained virtual cars using reinforcement learning.</li>
+      <li>Cisco Certified Network Associate (CCNA) Security – Certified in networking and IP routing.</li>
+      <li>CodeConnection Competition – Solved algorithmic problems using Python.</li>
+      <li>Digital Air Selangor Hackathon – Developed an inventory dashboard with demand forecasting.</li>
+      <li>Google Workspace Hackathon 2024 – Built a finance system using AppSheet and App Script.</li>
+      <li>UMDAC Datathon – Built stock prediction models with trading signal logic.</li>
+      <li>UM Hackathon – Developed GrabPT, an AI chatbot to aid Grab merchants.</li>
+      <li>AI Veracity Hackathon – Created No Waste Kitchen, an AI food waste reduction app.</li>
+    </ul>
+  </div>
+</section>
+
 
   <!-- Contact -->
   <section id="contact" class="p-10 text-center">
@@ -183,7 +220,7 @@
     </div>
   </section>
 
-  <!-- JS for Hamburger Menu and Typing -->
+  <!-- Scripts -->
   <script>
     const menuBtn = document.getElementById('menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
@@ -199,7 +236,6 @@
       mobileMenu.classList.remove('translate-x-0');
     });
 
-    // Optional: Close menu when any link is clicked
     const links = mobileMenu.querySelectorAll('a');
     links.forEach(link => {
       link.addEventListener('click', () => {
@@ -208,14 +244,14 @@
       });
     });
 
-
-
     new Typed("#typed-text", {
-      strings: ["Aspiring Data Analyst", "Tech Enthusiast", "AI Explorer"],
+      strings: ["Aspiring Data Analyst", "Hackathon Competitor", "AI and ML Enthusiast"],
       typeSpeed: 60,
       backSpeed: 40,
       backDelay: 1500,
-      loop: true
+      startDelay: 300,
+      loop: true,
+      showCursor: true
     });
   </script>
 </body>
